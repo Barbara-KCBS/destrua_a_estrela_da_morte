@@ -1,9 +1,3 @@
-Olá! Meu nome é Bárbara e sou iniciante em programação. 
- 
-Neste projeto, coloquei em prática o que venho aprendendo. 
-Acredito que atendi aos requisitos obrigatórios. Tentei fazer 
-o melhor possível para atender o "Desejável" e o "Seria incrível se".
-
 Para salvar as informações dos jogadores será necessário:
 
  * criar um banco de dados com o nome de "jogo" no SGBD MySQL;
@@ -14,18 +8,6 @@ Para salvar as informações dos jogadores será necessário:
     - missao varchar
     - pontos int
 
-Requisitos:
-    Obrigatório:
-    - Usar linguagem PHP, JavaScript, HTML, CSS (check)
-    Desejável:
-    - Usar Orientação a Objetos (check)
-    - Usar AJAX (check)
-    - Manter código organizado (tentei)
-    - Criar interface simples e intuitiva (tentei)
-    Seria incrível se:
-    - Usar TDD (!Usar TDD)
-    - Usar algum tipo de animação (check)
-    - Gravar histórico dos jogadores (check)
 
 
 
