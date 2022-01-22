@@ -9,6 +9,10 @@ export class Xwing {
     _iniciouJogo = true;
     _pausarRotacao = false;
 
+    set pararAproximacao(boleano) {
+        this._pararAproximacao = boleano;
+    }
+    
     mostrarNave() {
         this._elemento.attr('src', './img/x-wing.png');
         this._elemento.addClass("x-wing");
@@ -50,9 +54,6 @@ export class Xwing {
     }
 
 
-    pararAproximacao(boleano) {
-        this._pararAproximacao = boleano;
-    }
 
     desviar(velocidade) {
         this._pausarRotacao = true;

@@ -10,7 +10,7 @@ export class Botoes {
     _jogador = new Jogador();
     _visualizacao = new Visualizacao(this._xWingNave, this._jogador);
     _turnos = new Turnos(this._visualizacao, this._xWingNave);
-    _historio = new Historico();
+    _historico = new Historico();
 
 
     entrar() {
@@ -20,7 +20,7 @@ export class Botoes {
             return
         }
         $(".entrada-do-jogo").fadeOut(1000);
-        this._historio.mostrarHistoricoDeJogadores();
+        this._historico.mostrarHistoricoDeJogadores();
 
     }
 
@@ -43,22 +43,22 @@ export class Botoes {
     acaoDesviar() {
         this._visualizacao.esconderOpcoesDeAcao();
 
-        if (this._turnos.nomeDoTurnoAtual() != this._turnos.nomeDoTurno(0)) {
+        if (this._turnos.nomeDoTurnoAtual != this._turnos.nomeDoTurno(0)) {
             $(".pontos-do-jogador").text(this._jogador.subtrairPontos());
-            if (this._turnos.naveInimigaAtual() != "") {
+            if (this._turnos.naveInimigaAtual != "") {
                 this._xWingNave.dano();
             }
         }
         this._xWingNave.desviar(20);
 
-        if (this._jogador.capturarPontos() === 0 || this._turnos.nomeDoTurnoAtual() === this._turnos.nomeDoTurno(3)) {
+        if (this._jogador.capturarPontos === 0 || this._turnos.nomeDoTurnoAtual === this._turnos.nomeDoTurno(3)) {
             this._visualizacao.jogadorPerdeu();
             return
         }
 
-        if (this._turnos.naveInimigaAtual() != "") {
-            this._turnos.naveInimigaAtual().pararAproximacao(false);
-            this._turnos.naveInimigaAtual().aproximar(5);
+        if (this._turnos.naveInimigaAtual != "") {
+            this._turnos.naveInimigaAtual.pararAproximacao = false;
+            this._turnos.naveInimigaAtual.aproximar(5);
         }
         this._turnos.executarTurnoAtual();
     }
@@ -68,36 +68,36 @@ export class Botoes {
 
         this._visualizacao.esconderOpcoesDeAcao();
 
-        if (this._turnos.nomeDoTurnoAtual() === this._turnos.nomeDoTurno(0) || this._turnos.nomeDoTurnoAtual() === this._turnos.nomeDoTurno(2)) {
+        if (this._turnos.nomeDoTurnoAtual === this._turnos.nomeDoTurno(0) || this._turnos.nomeDoTurnoAtual === this._turnos.nomeDoTurno(2)) {
             $(".pontos-do-jogador").text(this._jogador.subtrairPontos());
-            if (this._turnos.naveInimigaAtual() != "") {
+            if (this._turnos.naveInimigaAtual != "") {
                 this._xWingNave.dano();
             }
         }
 
-        if (this._turnos.nomeDoTurnoAtual() === this._turnos.nomeDoTurno(1)) {
-            this._turnos.naveInimigaAtual().permitirAtirar(false);
-            this._turnos.naveInimigaAtual().dano();
+        if (this._turnos.nomeDoTurnoAtual === this._turnos.nomeDoTurno(1)) {
+            this._turnos.naveInimigaAtual.permitirAtirar = false;
+            this._turnos.naveInimigaAtual.dano();
             this._xWingNave.atirar(500);
         } else {
             this._xWingNave.atirar(700);
         }
 
-        if (this._jogador.capturarPontos() === 0) {
+        if (this._jogador.capturarPontos === 0) {
             this._visualizacao.jogadorPerdeu();
             return
         }
 
-        if (this._turnos.nomeDoTurnoAtual() === this._turnos.nomeDoTurno(3)) {
+        if (this._turnos.nomeDoTurnoAtual === this._turnos.nomeDoTurno(3)) {
             this._visualizacao.jogadorGanhou();
             return
         }
 
         this._xWingNave.aproximarNave(300);
 
-        if (this._turnos.naveInimigaAtual() != "") {
-            this._turnos.naveInimigaAtual().pararAproximacao(false);
-            this._turnos.naveInimigaAtual().aproximar(5);
+        if (this._turnos.naveInimigaAtual != "") {
+            this._turnos.naveInimigaAtual.pararAproximacao = false;
+            this._turnos.naveInimigaAtual.aproximar(5);
         }
         this._turnos.executarTurnoAtual();
     }
@@ -107,24 +107,24 @@ export class Botoes {
     acaoAcelerar() {
         this._visualizacao.esconderOpcoesDeAcao();
 
-        if (this._turnos.nomeDoTurnoAtual() != this._turnos.nomeDoTurno(2)) {
+        if (this._turnos.nomeDoTurnoAtual != this._turnos.nomeDoTurno(2)) {
             this._xWingNave.acelerar(100);
             $(".pontos-do-jogador").text(this._jogador.subtrairPontos());
-            if (this._turnos.naveInimigaAtual() != "") {
+            if (this._turnos.naveInimigaAtual != "") {
                 this._xWingNave.dano();
             }
 
         } else {
             this._xWingNave.acelerar(30);
         }
-        if (this._jogador.capturarPontos() === 0 || this._turnos.nomeDoTurnoAtual() === this._turnos.nomeDoTurno(3)) {
+        if (this._jogador.capturarPontos === 0 || this._turnos.nomeDoTurnoAtual === this._turnos.nomeDoTurno(3)) {
             this._visualizacao.jogadorPerdeu();
             return
         }
 
-        if (this._turnos.naveInimigaAtual() != "") {
-            this._turnos.naveInimigaAtual().pararAproximacao(false);
-            this._turnos.naveInimigaAtual().aproximar(5);
+        if (this._turnos.naveInimigaAtual != "") {
+            this._turnos.naveInimigaAtual.pararAproximacao = false;
+            this._turnos.naveInimigaAtual.aproximar(5);
         }
         this._turnos.executarTurnoAtual();
     }
