@@ -6,8 +6,12 @@ export class Destroyer {
     _top = 100;
     _permitirAtirar = true;
 
-    permitirAtirar(boleano) {
+    set permitirAtirar(boleano) {
         this._permitirAtirar = boleano;
+    }
+
+    set pararAproximacao(boleano) {
+        this._pararAproximacao = boleano;
     }
 
     mostrarNave(classe, img) {
@@ -16,11 +20,8 @@ export class Destroyer {
         this._local.append(this._elemento);
     }
 
-    pararAproximacao(boleano) {
-        this._pararAproximacao = boleano;
-    }
 
-    aproximar(velocidade) {
+    aproximar() {
         this._pararAproximacao = false;
         const intervalo = setInterval(() => {
 
@@ -44,7 +45,7 @@ export class Destroyer {
             }
 
             if (this._top === 1000) {
-                this.pararAproximacao(true);
+                this.pararAproximacao = true;
                 this._elemento.remove();
             }
 
@@ -54,6 +55,7 @@ export class Destroyer {
 
     _atirar() {
         document.querySelector("#laser").play();
+        
         let tiro1 = $("<div/>");
         tiro1.addClass("tiro");
         this._local.append(tiro1);
@@ -72,13 +74,12 @@ export class Destroyer {
 
         const intervalo = setInterval(() => {
             posicaoDoTiro += 5;
-            tiro1.css("top", `${posicaoDoTiro}px`);
-            tiro2.css("top", `${posicaoDoTiro}px`);
+            $(".tiro").css("top", `${posicaoDoTiro}px`);
 
             if (posicaoDoTiro > 580) {
                 clearInterval(intervalo);
-                tiro1.remove();
-                tiro2.remove();
+                $(".tiro").remove();
+              
             }
 
         }, 13)

@@ -21,9 +21,9 @@ export class Historico {
 
     salvarDadosDoJogador(jogador) {
 
-        let nome = jogador.capturarNome();
-        let missao = jogador.capturarStatusDaMissao();
-        let pontos = jogador.capturarPontos();
+        let nome = jogador.capturarNome;
+        let missao = jogador.capturarStatusDaMissao;
+        let pontos = jogador.capturarPontos;
 
         $.ajax({
             url: 'http://localhost/destrua_a_estrela_da_morte/inserir.php',

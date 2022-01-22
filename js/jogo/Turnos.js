@@ -1,4 +1,4 @@
-import { Destroyer } from "./elementos/Detroyer.js";
+import { Destroyer } from "./elementos/Destroyer.js";
 import { TieFighter } from "./elementos/TieFighter.js";
 
 export class Turnos {
@@ -13,16 +13,17 @@ export class Turnos {
         this._navePrincipal = navePrincipal;
     }
 
-    nomeDoTurno(indice) {
-        return this._listaDeTurnos[indice];
-    }
-
-    nomeDoTurnoAtual() {
+    
+    get nomeDoTurnoAtual() {
         return this._nomeDoTurnoAtual;
     }
-
-    naveInimigaAtual() {
+    
+    get naveInimigaAtual() {
         return this._naveInimigaAtual;
+    }
+    
+    nomeDoTurno(indice) {
+        return this._listaDeTurnos[indice];
     }
 
     executarTurnoAtual() {
@@ -54,8 +55,8 @@ export class Turnos {
         const intervalo = setInterval(() => {
             if (contador === 4) {
                 clearInterval(intervalo);
-                this._navePrincipal.pararAproximacao(true);
-                tieFighter.pararAproximacao(true);
+                this._navePrincipal.pararAproximacao = true;
+                tieFighter.pararAproximacao = true;
                 this._jogo.mostrarOpcoesDeACao();
                 this._turnoAtual = this._listaDeTurnos[1];
                 return
@@ -76,8 +77,8 @@ export class Turnos {
         const intervalo = setInterval(() => {
             if (contador === 4) {
                 clearInterval(intervalo);
-                this._navePrincipal.pararAproximacao(true);
-                destroyer.pararAproximacao(true);
+                this._navePrincipal.pararAproximacao = true;
+                destroyer.pararAproximacao = true;
                 this._jogo.mostrarOpcoesDeACao();
                 this._turnoAtual = this._listaDeTurnos[2];
                 return
@@ -94,7 +95,7 @@ export class Turnos {
         const intervalo = setInterval(() => {
             if (contador === 8) {
                 clearInterval(intervalo);
-                this._navePrincipal.pararAproximacao(true);
+                this._navePrincipal.pararAproximacao = true;
                 this._jogo.mostrarOpcoesDeACao();
                 this._turnoAtual = this._listaDeTurnos[3];
                 return
@@ -111,7 +112,7 @@ export class Turnos {
         const intervalo = setInterval(() => {
             if (contador === 4) {
                 clearInterval(intervalo);
-                this._navePrincipal.pararAproximacao(true);
+                this._navePrincipal.pararAproximacao = true;
                 this._jogo.mostrarOpcoesDeACao();
                 return
             }

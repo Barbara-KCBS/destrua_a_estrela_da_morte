@@ -12,14 +12,14 @@ export class TieFighter {
         this._novaDimensao = novaDimensao;
     }
 
+    set pararAproximacao(boleano) {
+        this._pararAproximacao = boleano;
+    }
+    
     mostrarNave(classe, img) {
         this._elemento.attr('src', img);
         this._elemento.addClass(classe);
         this._local.append(this._elemento);
-    }
-
-    pararAproximacao(boleano) {
-        this._pararAproximacao = boleano;
     }
 
     aproximar(velocidade) {
@@ -45,7 +45,7 @@ export class TieFighter {
             }
 
             if (this._top === 1000) {
-                this.pararAproximacao(true);
+                this.pararAproximacao = true;
                 this._elemento.remove();
             }
 

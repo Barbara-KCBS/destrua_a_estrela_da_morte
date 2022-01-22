@@ -4,19 +4,22 @@ export class Jogador {
     _statusDaMissao;
     _pontos = 3
 
-    adicionarNome(nome) {
+    set adicionarNome(nome) {
         this._nome = nome;
     }
-
-    capturarNome() {
+    
+    set alterarStatusDaMissao(status) {
+        this._statusDaMissao = status;
+    }
+    get capturarNome() {
         return this._nome;
     }
 
-    capturarPontos() {
+    get capturarPontos() {
         return this._pontos;
     }
 
-    capturarStatusDaMissao() {
+    get capturarStatusDaMissao() {
         return this._statusDaMissao;
     }
 
@@ -31,7 +34,4 @@ export class Jogador {
         return this._pontos;
     }
 
-    alterarStatusDaMissao(status) {
-        this._statusDaMissao = status;
-    }
 }
