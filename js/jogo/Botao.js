@@ -4,7 +4,7 @@ import { Turnos } from "./Turnos.js";
 import { Visualizacao } from "./Visualizacao.js";
 import { Historico } from "./Historico.js";
 
-export class Botoes {
+export class Botao {
 
     _xWingNave = new Xwing();
     _jogador = new Jogador();

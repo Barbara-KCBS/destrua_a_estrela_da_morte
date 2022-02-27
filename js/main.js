@@ -1,7 +1,7 @@
 
-import { Botoes } from "./jogo/Botoes.js";
+import { Botao } from "./jogo/Botao.js";
 
-const botoes = new Botoes();
+const botoes = new Botao();
 
 
 $("#botao-entrar").on("click", () => {
