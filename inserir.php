@@ -15,7 +15,7 @@
     $stmt->execute();
 
     if ($stmt->rowCount() >= 1) {
-        echo json_encode('Comentário Salvo com Sucesso');
+        echo json_encode('Jogador salvo com sucesso');
     } else {
-        echo json_encode('Falha ao salvar comentário');
+        echo json_encode('Falha ao salvar jogador');
     }
