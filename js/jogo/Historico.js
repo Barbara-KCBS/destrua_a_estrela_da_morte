@@ -2,7 +2,7 @@ export class Historico {
 
     mostrarHistoricoDeJogadores() {
         $.ajax({
-            url: 'http://localhost/destrua_a_estrela_da_morte/selecionar.php',
+            url: './selecionar.php',
             method: 'GET',
             dataType: 'json'
         }).done(function (result) {
@@ -26,7 +26,7 @@ export class Historico {
         let pontos = jogador.capturarPontos;
 
         $.ajax({
-            url: 'http://localhost/destrua_a_estrela_da_morte/inserir.php',
+            url: './inserir.php',
             method: 'POST',
             data: { nome: nome, missao: missao, pontos: pontos },
             dataType: 'json'

@@ -1,12 +1,4 @@
-Para salvar as informações dos jogadores será necessário:
-
- * criar um banco de dados com o nome de "jogo" no SGBD MySQL;
- * criar tabela com o nome de "jogadores";
- * a tabela deverá ter 4 colunas nesta ordem:
-    - id int AUTO_INCREMENTO
-    - nome varchar
-    - missao varchar
-    - pontos int
+Importe o banco de dados do diretório metadata.
 
 
 

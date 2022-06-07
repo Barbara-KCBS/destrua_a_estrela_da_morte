@@ -1,41 +1,37 @@
 
-import { Botoes } from "./jogo/Botoes.js";
+import { Botao } from "./jogo/Botao.js";
 
-const botoes = new Botoes();
+const botao = new Botao();
 
 
 $("#botao-entrar").on("click", () => {
-    botoes.entrar();
+    botao.entrar();
 });
 
 
 $(".botao-iniciar-jogo").on("click", () => {
-    botoes.iniciarJogo();
+    botao.iniciarJogo();
 });
 
 
 $(".botao-desviar").on("click", () => {
-    botoes.acaoDesviar();
+    botao.acaoDesviar();
 });
 
 
 $(".botao-atirar").on("click", () => {
-    botoes.acaoAtirar();
+    botao.acaoAtirar();
 });
 
 
 $(".botao-acelerar").on("click", () => {
-    botoes.acaoAcelerar();
+    botao.acaoAcelerar();
 });
 
 
 $(".botao-reiniciar-jogo").on("click", () => {
-    botoes.reiniciarJogo();
+    botao.reiniciarJogo();
 });
-
-$(".pagina-direita").on("click", () => {
-    botoes.paginaParaDireita();
-})
 
 
 

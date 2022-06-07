@@ -51,29 +51,7 @@
                     <th class="thead-missao">Missão</th>
                     <th class="thead-pontos">Pontos</th>
                 </thead>
-
                 <tbody>
-                    <tr>
-                        <td class="td-nome">Chewbacca</td>
-                        <td class="td-missao">INCONCLUSIVA</td>
-                        <td class="td-pontos">-10</td>
-
-                    </tr>
-
-                    <tr>
-                        <td class="td-nome">Yoda</td>
-                        <td class="td-missao">CUMPRIDA++</td>
-                        <td class="td-pontos">1000</td>
-
-                    </tr>
-
-                    <tr>
-                        <td class="td-nome">Darth Vader</td>
-                        <td class="td-missao">TRAPACEOU</td>
-                        <td class="td-pontos">3</td>
-
-                    </tr>
-
                 </tbody>
             </table>
 
