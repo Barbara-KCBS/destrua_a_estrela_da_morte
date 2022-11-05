@@ -33,7 +33,7 @@
         <div class="entrada-do-jogo">
             <h1>Destrua a estrela da morte</h1>
             <h4>Olá, Piloto! Sua missão é destruir a estrela da morte.</h4>
-            <p>Em cada etapa do jogo, aparecerá 3 opções de ações em sua tela . Escolha apenas uma ação em cada etapa. Cada escolha mal sucedida, você perde 1 ponto. Caso a pontuação seja zerada ou a ação escolhida no ato final seja incorreta, a missão será perdida.</p>
+            <p>Em cada etapa do jogo, escolha uma ação. Cada escolha mal sucedida, você perde 1 ponto. Caso a pontuação seja zerada ou o ato final seja desastroso, a missão será perdida.</p>
             <p>Que a força esteja com você!</p>
 
             <form name="cad-jogador" method="POST" action="">
